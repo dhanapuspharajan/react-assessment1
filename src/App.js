@@ -12,17 +12,17 @@ export function Header() {
 
 export function ButtonSec(){
   
-  let [funShow,setFunShow] = useState({state:false});
-  let [ClassShow,setClassShow] = useState({state:false});
+  let [funV,setFunVisible] = useState('hidden');
+  let [ClassV,setClassVisible] = useState('hidden');
 
   function Func(){
-    funShow.state ? setFunShow({state:false}):setFunShow({state:true})
-
+    funV ==='hidden' ? setFunVisible('visible'):setFunVisible('hidden')
   }
 
   function Classc(){
-    ClassShow.state ? setClassShow({state:false}): setClassShow({state:true})
+   ClassV === 'hidden' ? setClassVisible('visible'): setClassVisible('hidden')
   }
+
    return (
      <div className='con'>
      <div className='ButtonSec'>
@@ -33,9 +33,19 @@ export function ButtonSec(){
        </button>
      </div>
       <div className='CardSec'>
-      { funShow.state && <FunCard head={'This is created using functional Coponent'} text2={'This is done using external css'} text3={'This is done using inline css'}></FunCard>}
+       <FunCard
+        visibility={funV} 
+       head={'This is created using functional Component'} 
+       text2={'This is done using external css'}
+        text3={'This is done using inline css'}>
+        </FunCard>
       
-     { ClassShow.state && <ClassCard  head={'This is created using Class Component'} text2={'This is done using external css'} text3={'This is done using inline css'}></ClassCard>}
+      <ClassCard
+      visibility={ClassV} 
+      head={'This is created using Class Component'}
+       text2={'This is done using external css'} 
+       text3={'This is done using inline css'}>
+       </ClassCard>
       </div>
       </div>
    )

@@ -1,9 +1,18 @@
 
 .Header{
   text-align: center;
-  text-shadow: 3px 3px 2px skyblue;
+  text-shadow: 3px 3px 2px rgb(97, 250, 242);
 }
 
+html{
+  background-image: linear-gradient(to bottom,
+  rgb(183, 226, 243),
+  white,
+  white,
+  rgb(183, 226, 243));
+  background-repeat: no-repeat;
+  height: 100%;
+}
 
 .ButtonSec{
   padding: 40px;
@@ -31,6 +40,7 @@ button{
   justify-content: space-evenly;
 }
 .classcard{
+ 
   position: absolute;
   right: 5%;
    background-color: aqua;
@@ -40,6 +50,7 @@ button{
    border: 2px solid black;
 }
 .funcard{
+
   position: absolute;
   left: 5%;
   background-color: aqua;
