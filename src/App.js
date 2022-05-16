@@ -26,7 +26,7 @@ export function ButtonSec(){
    return (
      <div className='con'>
      <div className='ButtonSec'>
-       <button onClick={Func} 
+       <button onClick={Func}
        >To see styling in functional component
        </button>
        <button onClick={Classc}>To see styling in Class component
